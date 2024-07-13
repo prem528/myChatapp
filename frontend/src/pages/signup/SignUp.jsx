@@ -9,7 +9,11 @@ import { useState } from "react";
 		password:'',
 		confirmPassword:'',
 		gender:''
-	})
+	});
+
+	const handleCheckboxChange = (gender) => {
+		setInputs({...inputs,gender})
+	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -68,7 +72,7 @@ import { useState } from "react";
     						/>
     					</div>
     
-    					<GenderCheckbox />
+    					<GenderCheckbox onCheckBoxChange = {handleCheckboxChange} selectedGender = {inputs.gender} />
     
     					<Link to="/login" className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block' href='#'>
     						Already have an account?
