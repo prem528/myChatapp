@@ -18,7 +18,7 @@ const ConversationList = () => {
 
 			{loading ? <span className='loading loading-spinner mx-auto'></span> : null}
 		</div>
-  )
-}
+  );
+};
 
 export default ConversationList
