@@ -8,8 +8,6 @@ export const useSocketContext = () => {
 	return useContext(SocketContext);
 };
  
- 
- 
 export const SocketContextProvider = ({ children }) => {
 	const [socket, setSocket] = useState(null);
 	const [onlineUsers, setOnlineUsers] = useState([]);
@@ -17,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://mychatapp-rsre.onrender.com/", {
+			const socket = io("https://mychatapp-rsre.onrender.com/",{
                 query:{
                     userId: authUser._id,
                 },
